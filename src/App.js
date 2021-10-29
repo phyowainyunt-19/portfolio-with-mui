@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
+import { Home, Resume, Portfolio, Navbar, Contacts } from './components';
+import Particles from './components/Particles';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import CssBaseline from '@mui/material/CssBaseline';
+
+
+const App = () => {
+    return (
+        <>
+            <CssBaseline />
+            <Navbar />
+            <Route exact path="/" component={Home} />
+            <Particles />
+            <Route path="/resume" component={Resume} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contacts} />
+        </>
+    )
 }
 
-export default App;
+export default App
