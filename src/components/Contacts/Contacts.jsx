@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, Typography, Button, Grid, Box } from '@material-ui/core';
+import { Typography, Button, Grid, Box } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 
 import { useStyles, InputField } from './styles';
@@ -9,7 +9,7 @@ const Contacts = () => {
     const classes = useStyles();
 
     return (
-        <Box component="div" style={{background: '#8EE4AF', height: "100vh"}}>
+        <Box component="div" style={{ background: '#8EE4AF', height: "100vh" }}>
             <Grid container justify="center">
                 <Box component="form" className={classes.form}>
                     <Typography variant="h5" className={classes.heading}>
